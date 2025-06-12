@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: alfreire <alfreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 14:20:54 by alex              #+#    #+#             */
-/*   Updated: 2025/06/05 00:51:28 by alex             ###   ########.fr       */
+/*   Updated: 2025/06/12 16:41:57 by alfreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ AForm *Intern::makeForm(const std::string &formName, const std::string &target) 
 		"robotomy request",
 		"presidential pardon"
 	};
-
-	AForm* (*fptr[3])(const std::string &);
+	// AForm* is the type that the function returns, (*fptr)(...) means that its a pointer to a function, and the (...) is the signature of arguments the fucntion.
+	// so when I do *fptr[3] I create an array of 3 pointers, and each of this pointers is a pointer to a function.
+	AForm* (*fptr[3])(const std::string &);// means I am creating an array of 3 funtion pointers that point to this fucntion parameter signatures and returns an AForm pointer.
 	fptr[0] = makeShrub;
 	fptr[1] = makeRobot;
 	fptr[2] = makePardon;

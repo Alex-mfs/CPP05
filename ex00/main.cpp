@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: alfreire <alfreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:06:03 by alex              #+#    #+#             */
-/*   Updated: 2025/05/21 14:08:58 by alex             ###   ########.fr       */
+/*   Updated: 2025/06/03 17:17:16 by alfreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main() {
 		std::cout << a << std::endl;
 		a.incrementGrade();
 		std::cout << a << std::endl;
+		std::cout << "my name is " << a.getName() << " and my grade is " << a.getGrade() << std::endl;
 		a.incrementGrade(); // exception
 	} catch (std::exception& e) {
 		std::cerr << e.what() << std::endl;
@@ -34,13 +35,21 @@ int main() {
 	}
 
 	try {
-		Bureaucrat c("Carlos", 0); // exeception
+		Bureaucrat c("Carlos", 0); // exception
+		c.getName();
+		c.getGrade();
+		c.incrementGrade();
+		c.decrementGrade();
 	} catch (std::exception& e) {
 		std::cerr << e.what() << std::endl;
 	}
 
 	try {
 		Bureaucrat d("Daniel", 151); // exception
+		d.getName();
+		d.getGrade();
+		d.incrementGrade();
+		d.decrementGrade();
 	} catch (std::exception& e) {
 		std::cerr << e.what() << std::endl;
 	}

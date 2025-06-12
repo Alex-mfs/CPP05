@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: alfreire <alfreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/23 18:07:32 by alex              #+#    #+#             */
-/*   Updated: 2025/06/05 01:11:49 by alex             ###   ########.fr       */
+/*   Updated: 2025/06/12 16:48:09 by alfreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,23 @@
 
 
 int main() {
-	Intern someRandomIntern;
+	Intern junior;
 
-	AForm *shrub = someRandomIntern.makeForm("shrubbery creation", "Backyard");
-	AForm *robot = someRandomIntern.makeForm("robotomy request", "Bender");
-	AForm *pardon = someRandomIntern.makeForm("presidential pardon", "Arthur Dent");
-	AForm *unknown = someRandomIntern.makeForm("coffee making", "Intern");
+	//AForm *shrub = junior.makeForm("shrubbery creation", "Backyard");
+	AForm *robot = junior.makeForm("robotomy request", "Bender");
+	AForm *pardon = junior.makeForm("presidential pardon", "Intern");
+	AForm *unknown = junior.makeForm("coffee making", "Intern");
 
 	std::cout << std::endl;
 
 	Bureaucrat boss("Boss", 1);
+
+	Intern j2(junior);
+	Intern j3;
+	Intern j4;
+
+	j4 = j3 = j2;
+	AForm *shrub = j4.makeForm("shrubbery creation", "Backyard");
 
 	if (shrub) {
 		boss.signForm(*shrub);
@@ -53,6 +60,8 @@ int main() {
 		AForm* a(unknown);
 		boss.signForm(*a);
 	}
+	
+	
 	
 	return 0;
 }

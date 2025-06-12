@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: alfreire <alfreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:06:51 by alex              #+#    #+#             */
-/*   Updated: 2025/05/23 17:22:58 by alex             ###   ########.fr       */
+/*   Updated: 2025/06/03 18:35:04 by alfreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class Bureaucrat {
 
 		void signForm(AForm &f);
 
-		void executeForm(AForm const & form);
+		void executeForm(AForm const & form) const;
 
 		//nested classes (define a class inside a class), this exceptions only make sense in the Bureacrat class context
 		class GradeTooHighException : public std::exception {
