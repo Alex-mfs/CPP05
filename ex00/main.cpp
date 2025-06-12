@@ -6,7 +6,7 @@
 /*   By: alfreire <alfreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 14:06:03 by alex              #+#    #+#             */
-/*   Updated: 2025/06/03 17:17:16 by alfreire         ###   ########.fr       */
+/*   Updated: 2025/06/12 16:55:12 by alfreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main() {
 		std::cout << "my name is " << a.getName() << " and my grade is " << a.getGrade() << std::endl;
 		a.incrementGrade(); // exception
 	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 
 	try {
@@ -31,7 +31,7 @@ int main() {
 		std::cout << b << std::endl;
 		b.decrementGrade(); // exception
 	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 
 	try {
@@ -41,7 +41,7 @@ int main() {
 		c.incrementGrade();
 		c.decrementGrade();
 	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 
 	try {
@@ -51,6 +51,6 @@ int main() {
 		d.incrementGrade();
 		d.decrementGrade();
 	} catch (std::exception& e) {
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: alfreire <alfreire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/21 16:07:23 by alex              #+#    #+#             */
-/*   Updated: 2025/06/03 18:08:34 by alfreire         ###   ########.fr       */
+/*   Updated: 2025/06/12 16:55:34 by alfreire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int main() {
 		Form f1("Very important Formulary", 1, 150);
 		std::cout << f1 << std::endl;
 	} catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
+		std::cout << e.what() << std::endl;
 	}
 
 	std::cout << "==== Test: making a Form with default, assign and copy ====\n";
@@ -36,7 +36,7 @@ int main() {
 	try {
 		Form f2("invalid_form", 0, 200); // both invalid
 	} catch (std::exception &e) {
-		std::cerr << "Error: " << e.what() << std::endl;
+		std::cout << "Error: " << e.what() << std::endl;
 	}
 
 	std::cout << "\n==== Test: Bureaucrat signs with suficient grade ====\n";
